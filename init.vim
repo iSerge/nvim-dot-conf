@@ -21,6 +21,10 @@ call plug#end()
 
 " }}} vim-plug
 
+" vim-which-key {{{
+source $HOME/.config/nvim/which-key.vim
+" }}}
+
 filetype plugin indent on
 
 set guifont=PragmataPro\ Mono\ Liga\ Regular\ 15
@@ -47,11 +51,6 @@ let g:lsp_cxx_hl_use_text_props = 1
 highlight LspCxxHlGroupMemberVariable ctermfg=244 guifg=#839496
 
 " }}} Colors
-
-" Leader {{{
-"noremap <Space> <Nop>
-let mapleader="\<Space>"
-" }}} Leader
 
 " Folding {{{
 set foldenable
