@@ -5,8 +5,6 @@ let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-"nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-"vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 " Create map to add keys to
 let g:which_key_map =  {}
@@ -48,7 +46,16 @@ let g:which_key_map['w'] = {
       \ 'v' : ['<C-W>v'     , 'split-window-right']    ,
       \ '?' : ['Windows'    , 'fzf-window']            ,
       \ }
-" }}}
+" }}} Window operations
+
+" Buffer operations {{{
+let g:which_key_map['b'] = {
+    \ 'name' : '+buffers' ,
+    \ 'd' : [':bd'        , 'delete buffer'],
+    \ 'n' : [':bn'        , 'next buffer'],
+    \ 'p' : [':bp'        , 'prev buffer'],
+    \ }
+" }}} Buffer operations
 
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
