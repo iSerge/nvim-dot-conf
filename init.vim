@@ -62,11 +62,12 @@ set foldmethod=syntax
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set et
+set expandtab
 
 set number " Show current line number
 set relativenumber " Show relative line numbers
 
+set ignorecase
 set smartcase
 set showmatch
 set hlsearch
@@ -81,13 +82,14 @@ set showbreak=↪\
 set listchars=tab:▸\ ,trail:·,nbsp:␣,extends:⟩,precedes:⟨
 set list
 
-" Setting up  airline
+" Airline {{{
 let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
 let g:airline_section_z = "\ue0a1:%l/%L Col:%c" "Кастомная графа положения курсора
 set laststatus=2
+" }}} Airline
 
-" Setting up coc.nvim
+" coc.nvim {{{
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -209,4 +211,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
+" }}}
