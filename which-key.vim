@@ -50,10 +50,10 @@ let g:which_key_map['w'] = {
 
 " Buffer operations {{{
 let g:which_key_map['b'] = {
-    \ 'name' : '+buffers' ,
-    \ 'd' : [':bd'        , 'delete buffer'],
-    \ 'n' : [':bn'        , 'next buffer'],
-    \ 'p' : [':bp'        , 'prev buffer'],
+    \ 'name' : '+buffers'    ,
+    \ 'd' : [':bp|bd #'   , 'delete buffer'],
+    \ 'n' : [':bn'           , 'next buffer'],
+    \ 'p' : [':bp'           , 'prev buffer'],
     \ }
 " }}} Buffer operations
 
